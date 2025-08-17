@@ -1,0 +1,77 @@
+
+// Color Variables
+$primary-color: #4f46e5;
+$secondary-color: #6366f1;
+$accent-color: #3b82f6;
+$bg-color: #f3f4f6;
+$text-color: #1f2937;
+$input-bg: #fff;
+$border-color: #d1d5db;
+$error-color: #ef4444;
+
+// Font
+$font-family: 'Segoe UI', sans-serif;
+
+// Global Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $bg-color;
+  color: $text-color;
+  min-height: 100vh;
+}
+
+// Form elements
+input, select, textarea {
+  background-color: $input-bg;
+  border: 1px solid $border-color;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: $primary-color;
+  outline: none;
+}
+
+// Buttons
+button {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: $secondary-color;
+}
+
+// Headings
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: $text-color;
+}
+
+
+// Container class for centering content
+.container {
+  max-width: 500px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,213 @@
+// /* src/theme.scss */
+
+// :root {
+//   --primary-color: #2D9CDB;
+//   --secondary-color: #56CCF2;
+//   --background-color: #f4f6f9;
+//   --text-color: #1f1f1f;
+//   --border-color: #dcdfe6;
+//   --error-color: #e74c3c;
+//   --border-radius: 12px;
+//   --input-padding: 12px 16px;
+//   --font-family: 'Cairo', sans-serif;
+// }
+
+// body {
+//   margin: 0;
+//   padding: 0;
+//   font-family: var(--font-family);
+//   background-color: var(--background-color);
+//   color: var(--text-color);
+// }
+
+// input, select, textarea {
+//   padding: var(--input-padding);
+//   border-radius: var(--border-radius);
+//   border: 1px solid var(--border-color);
+//   font-size: 16px;
+//   outline: none;
+//   width: 100%;
+//   box-sizing: border-box;
+//   transition: border-color 0.3s ease;
+// }
+
+// input:focus {
+//   border-color: var(--primary-color);
+// }
+
+// button {
+//   padding: 12px 24px;
+//   background-color: var(--primary-color);
+//   color: white;
+//   font-size: 16px;
+//   border: none;
+//   border-radius: var(--border-radius);
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
+// }
+
+// button:hover {
+//   background-color: var(--secondary-color);
+// }
+
+// .form-container {
+//   max-width: 500px;
+//   margin: 40px auto;
+//   background-color: white;
+//   padding: 32px;
+//   border-radius: var(--border-radius);
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+// }
+
+// .form-title {
+//   font-size: 24px;
+//   font-weight: bold;
+//   margin-bottom: 24px;
+//   text-align: center;
+//   color: var(--primary-color);
+// }
+
+// .form-group {
+//   margin-bottom: 20px;
+// }
+
+// label {
+//   display: block;
+//   margin-bottom: 8px;
+//   font-weight: 600;
+// }
+/*==============================
+  ✅ VARIABLES
+==============================*/
+$primary-color: #3b577b;
+$secondary-color: #6c757d;
+$accent-color: #17a2b8;
+$background-color: #f8f9fa;
+$text-color: #212529;
+$error-color: #dc3545;
+$success-color: #28a745;
+$input-bg: #ffffff;
+$border-color: #ced4da;
+
+/*==============================
+  ✅ BASE STYLES
+==============================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.5;
+}
+
+/*==============================
+  ✅ FORMS
+==============================*/
+form {
+  display: flex;
+  padding: 0.75rem 2.5rem 0.75rem 0.75rem; // space for icon on right
+
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: $text-color;
+}
+
+input,
+select,
+textarea {
+  background-color: $input-bg;
+  border: 1px solid $border-color;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: $primary-color;
+  outline: none;
+}
+
+.error-message {
+  color: $error-color;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/*==============================
+  ✅ BUTTONS
+==============================*/
+button {
+  background-color: $primary-color;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+/*==============================
+  ✅ CONTAINERS
+==============================*/
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/*==============================
+  ✅ HEADINGS
+==============================*/
+h1, h2, h3, h4, h5 {
+  color: $primary-color;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/*==============================
+  ✅ LINKS
+==============================*/
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*==============================
+  ✅ UTILITIES
+==============================*/
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.text-center { text-align: center; }
+.text-danger { color: $error-color; }
+.text-success { color: $success-color; }
+

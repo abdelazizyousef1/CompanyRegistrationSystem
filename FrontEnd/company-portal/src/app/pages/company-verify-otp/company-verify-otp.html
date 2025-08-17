@@ -1,0 +1,61 @@
+<div class="container">
+  <h2>Verify OTP</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <!-- Email (Read Only) -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" [disabled]="true" />
+    </div>
+
+    <!-- OTP Code -->
+    <div class="form-group">
+      <label for="otpCode">OTP Code</label>
+      <input
+        id="otpCode"
+        type="text"
+        formControlName="otpCode"
+        class="form-control"
+        maxlength="6"
+      />
+      <div
+        class="error"
+        *ngIf="form.get('otpCode')?.touched && form.get('otpCode')?.invalid"
+      >
+        OTP code must be 4 to 6 digits.
+      </div>
+    </div>
+
+    <!-- Submit & Resend -->
+    <div class="form-actions">
+      <button type="submit" [disabled]="form.invalid">Verify</button>
+      <button
+  type="button"
+  (click)="sendOtp()"
+  [disabled]="countdown > 0"
+  style="margin-left: 10px;"
+>
+  Resend OTP<span *ngIf="countdown > 0"> ({{ countdown }})</span>
+</button>
+
+    </div>
+
+    <!-- Success & Error Messages -->
+    <div *ngIf="success" style="color: green; margin-top: 10px;">
+      {{ success }}
+    </div>
+    <div *ngIf="error" style="color: red; margin-top: 10px;">
+      {{ error }}
+    </div>
+    <div *ngIf="otpFromState">
+  <span
+    style="text-decoration: underline; cursor: pointer; color: blue;"
+    [attr.title]="'[Verification Code] OTP: ' + otpFromState"
+  >
+    Put your mouse to get your otp
+  </span>
+</div>
+
+  </form>
+  
+</div>

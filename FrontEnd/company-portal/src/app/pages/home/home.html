@@ -1,0 +1,14 @@
+<div class="container">
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
+  <div class="bg-white rounded-2xl shadow-md p-6 w-full max-w-md text-center">
+    <img *ngIf="logoUrl" [src]="logoUrl" alt="Company Logo" style="max-width: 150px; height: auto;">
+    <h1 class="text-xl font-semibold text-gray-800 mb-4">{{ message }}</h1>
+    <button
+      (click)="logout()"
+      class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-xl transition"
+    >
+      Logout
+    </button>
+  </div>
+</div>
+</div>
