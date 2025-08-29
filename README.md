@@ -122,9 +122,13 @@ On success, view the home page showing the company logo, "Hello {Company Name}",
 API Endpoints
 
 POST /api/companies/register: Register a new company.
+
 POST /api/companies/verify-otp: Validate OTP.
+
 POST /api/companies/set-password: Set company password.
+
 POST /api/auth/login: Log in and receive a JWT token.
+
 GET /api/companies/profile: Get company profile (requires authentication).
 
 
